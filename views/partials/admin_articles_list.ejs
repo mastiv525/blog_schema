@@ -1,0 +1,53 @@
+<div class="whole-wrap">
+    <div class="container">
+
+        <div class="section-top-border">
+				<div class="row">
+					<div class="col-lg-8 col-md-8">
+						<h3 style="margin-top: 100px;" class="mb-30 title_color">Articles list</h3>
+                        <ul>
+                            <% articles.map((article) => { %> 
+                            <li id="<%= article._id %>"><%= article.title %> <a class="edit-link" onclick="return false" href="#">edit</a> | <a id="<%= article.category[0].name %>" class="delete-link" onclick="return false" href="#">delete</a></li>
+                            <% }) %> 
+                        </ul>
+						<form id="save_article_form" onsubmit="event.preventDefault()" method="post" action="#" style="display: none;">
+							<div class="mt-10">
+								<input type="text" name="title" placeholder="Article title" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Article title'" required="" class="single-input">
+							</div>
+							<div class="mt-10">
+								<input type="date" name="created_at" required="" class="single-input">
+							</div>
+							<div class="mt-10">
+								<input type="text" name="image" placeholder="Image path" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Image path'" required="" class="single-input">
+							</div>
+
+							<div class="input-group-icon mt-10">
+								
+								<div class="form-select" id="default-select">
+									<select name="category">
+										<option value="0">Select a category</option>
+                                        <% categories.map((category) => { %> 
+										<option id="<%= category.name %>" value="<%= category.name %>"><%= category.name %></option>
+                                        <% }) %> 
+									</select>
+								</div>
+							</div>
+							
+							<div class="mt-10">
+								<textarea name="description" class="single-textarea" placeholder="Article description" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Article description'" required=""></textarea>
+							</div>
+							<div class="mt-10">
+								<textarea name="long_description" class="single-textarea" placeholder="Article long description" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Article long description'" required=""></textarea>
+							</div>
+
+                            <button id="save_article_button" type="submit" value="submit" class="primary_btn">
+                                    <span>Save article</span>
+                            </button>
+						</form>
+                             <div class="info"></div>
+					</div>
+					
+				</div>
+			</div>
+    </div>
+</div>

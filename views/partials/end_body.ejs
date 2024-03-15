@@ -1,0 +1,34 @@
+<% const newsletter_pages = ['main', 'about', 'services', 'portfolio', 'portfolio_details'] %> 
+<!-- Optional JavaScript -->
+	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+	<script src="/js/jquery-3.2.1.min.js"></script>
+	<script src="/js/popper.js"></script>
+	<script src="/js/bootstrap.min.js"></script>
+	<script src="/js/stellar.js"></script>
+	<script src="/js/jquery.magnific-popup.min.js"></script>
+	<script src="/vendors/nice-select/js/jquery.nice-select.min.js"></script>
+	<script src="/vendors/isotope/imagesloaded.pkgd.min.js"></script>
+	<script src="/vendors/isotope/isotope-min.js"></script>
+	<script src="/vendors/owl-carousel/owl.carousel.min.js"></script>
+	
+    <% if(typeof page !== 'undefined' && page == 'contact') { %> 
+    <script src="/js/portfolio-app/mail-script.js"></script>
+    <% } %> 
+    <% if(typeof page !== 'undefined' && page == 'admin') { %> 
+    <script src="/js/portfolio-app/admin-add-article-script.js"></script>
+    <% } %> 
+    <% if(typeof page !== 'undefined' && page == 'admin_articles_list') { %> 
+    <script src="/js/portfolio-app/admin-edit-article-script.js"></script>
+    <script src="/js/portfolio-app/admin-delete-article-script.js"></script>
+    <% } %> 
+    <% if(typeof page !== 'undefined' && newsletter_pages.includes(page)) { %> 
+    <script src="/js/portfolio-app/newsletter-script.js"></script>
+    <% } %> 
+	<!--gmaps Js-->
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCjCGmQ0Uq4exrzdcL6rvxywDDOvfAu6eE"></script>
+	<script src="/js/gmaps.min.js"></script>
+	<script src="/js/theme.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,46 @@
+<section class="portfolio_area section_gap_top" id="portfolio">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+					<div class="main_title text-left">
+						<h2>quality work <br>
+							Recently done project </h2>
+					</div>
+				</div>
+			</div>
+			<div class="filters portfolio-filter">
+				<ul>
+					<li class="active" data-filter="*">all</li>
+					<li data-filter=".popular">popular</li>
+					<li data-filter=".latest"> latest</li>
+					<li data-filter=".following">following</li>
+					<li data-filter=".upcoming">upcoming</li>
+				</ul>
+			</div>
+	
+			<div class="filters-content">
+				<div class="row portfolio-grid justify-content-center">
+					<% for(var i =0; i < portfolio.length; i++) { %> 
+
+					<div class="col-lg-4 col-md-6 <%= portfolio[i].category %> ">
+						<div class="portfolio_box">
+							<div class="single_portfolio">
+								<img class="img-fluid w-100" src="<%= portfolio[i].image %>" alt="">
+								<div class="overlay"></div>
+								<a href="<%= portfolio[i].image %>" class="img-gal">
+									<div class="icon">
+										<span class="lnr lnr-cross"></span>
+									</div>
+								</a>
+							</div>
+							<div class="short_info">
+								<h4><a href="/portfolio/details/<%= portfolio[i]._id %>"><%= portfolio[i].title %></a></h4>
+								<p>Animated, portfolio</p>
+							</div>
+						</div>
+					</div>
+                    <% } %> 
+				</div>
+			</div>
+		</div>
+	</section>

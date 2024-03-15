@@ -1,0 +1,16 @@
+<section class="banner_area">
+        <div class="banner_inner d-flex align-items-center">
+            <div class="container">
+                <div class="banner_content text-center">
+                    <h2><%= page_name %></h2>
+                    <div class="page_link">
+                        <a href="/">Home</a>
+                        <a href="<%= page_link %>"><%= page_link_title %></a>
+                        <% if(typeof page_link2 !== 'undefined' && page_link2) { %>
+                        <a href="<%= page_link2 %>"><%= page_link_title2 %></a>
+                        <% } %>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>

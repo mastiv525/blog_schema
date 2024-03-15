@@ -1,0 +1,33 @@
+<section class="portfolio_details_area section_gap">
+        <div class="container">
+            <div class="portfolio_details_inner">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="left_img">
+                            <img class="img-fluid" src="<%= portfolio_detail.image %>" alt="">
+                        </div>
+                    </div>
+                    <div class="offset-lg-1 col-lg-5">
+                        <div class="portfolio_right_text mt-30">
+                            <h4 class="text-uppercase"><%= portfolio_detail.title %></h4>
+                            <p>
+                                <%= portfolio_detail.description %>
+                            </p>
+                            <ul class="list">
+                                <li><span>Rating</span>: 
+                                <% for(var i = 1; i <= portfolio_detail.rating; i++) { %> 
+                                <i class="fa fa-star"></i>
+                                <% } %> 
+                                </li>
+                                <li><span>Client</span>: <%= portfolio_detail.client %></li>
+                                <li><span>Website</span>: <%= portfolio_detail.website %></li>
+                                <li><span>Completed</span>: <%= portfolio_detail.completed %></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <p><%= portfolio_detail.long_description %></p>
+               
+            </div>
+        </div>
+    </section>
